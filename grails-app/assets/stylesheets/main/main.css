@@ -1,0 +1,196 @@
+*{
+    font-family:"Microsoft YaHei",
+    微软雅黑,"MicrosoftJhengHei",
+    华文细黑,STHeiti,MingLiu
+}
+body {
+/*    background-color: rgba(221,241,255, 0.6);
+    background-image: url(../background/bg1.png);*/
+    background: rgba(221,241,255, 1)  /*url(../background/bg1.png) no-repeat fixed top*/;
+    overflow: hidden;
+    background-size:cover;
+}
+.noSelected{
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+}
+.n1 {
+    height: 60px;
+    padding: 0 50px;
+    position: relative;
+}
+.logo_c{
+    height: 100%;
+    width: 175px;
+    float: left;
+}
+.logo_img {
+    padding: 8px 0;
+    height: 100%;
+    width: 32px;
+    margin-right: 10px;
+}
+.logo_t{
+    font-size: 16px;
+
+}
+.navbar-nav > li > a{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.h-right{
+    float: right;
+    width: 200px;
+    height: 100%;
+    padding-right:20px;
+}
+.h-center{
+    position: absolute;
+    left: 230px;
+    right: 250px;
+    height: 100%;
+}
+.nav-ul{
+    padding: 0;
+    min-width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    left: 50px;
+    right: 50px;
+    position: absolute;
+}
+.nav-ul > li {
+    font-size: 14px;
+    float: left;
+    list-style: none;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin: 12px 20px;
+    cursor:pointer;
+    letter-spacing: 1px;
+}
+.nav-ul > li:not(.dropdown):hover{
+    background: #eff2f5;
+    border-radius: 2px;
+    transition: background .2s ease-out
+}
+.nav-ul li:not(.dropdown).active {
+    background: #1b6d85;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #5397dc  0%, #009ce6 100%);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+}
+.nav-ul .dropdown a{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-ul .dropdown .dropdown-menu {
+    min-width: 120px;
+}
+.avatar {
+    width: 45px;
+    height: 39px;
+    border-radius: 4px;
+    margin: 10px;
+    float: right;
+}
+.right-name {
+    float: right;
+    margin: 20px 10px;
+    letter-spacing: 1px;
+}
+.right-name > a {
+    text-decoration: none;
+    color: #000;
+}
+.right-name > a:hover {
+    color: #23527c
+}
+.right-name > a + ul {
+    min-width: 100px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #f3f3f3 0%, #d6d6d6  100%);
+    box-shadow: 0 0 8px 1px #e2e2e2;
+}
+.footer .content{
+    width: 535px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+.container-main {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    right: 20px;
+    bottom: 100px;
+    /*background-color: rgba(221,241,255, 1);*/
+    background: rgba(221,241,255, 0.6) url('../background/bg1.png') no-repeat 0% center;
+    background-size:contain;
+    /*background-color: rgba(221,241,255, 0.6);*/
+    /*    background-image: url(../background/bg1.png);*!*/
+/*    background: rgba(221,241,255, 1)  url(../background/bg1.png) no-repeat fixed top;
+    background-size: 90% 100%;*/
+/*    border: 1px solid #000;*/
+}
+
+.container-main > .shift {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+}
+.container-main > .shift .btn1{
+    position: absolute;
+    top: calc(50% - 37px);
+    left: calc(50% - 37px);
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    filter:alpha(Opacity=50);-moz-opacity:0.5;opacity: 0.5;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.container-main > .left {
+    left: 0;
+}
+
+
+.container-main > .right  {
+    right:0
+}
+
+.container-main > .center {
+    position: absolute;
+    /* height: 100%; */
+    left: 200px;
+    right: 200px;
+    top: 50px;
+    bottom: 80px;
+    border-radius: 5px;
+    /* padding: 100px; */
+}
+#userManager .modal-body {
+    height: 580px;
+}
+.dropdown a{
+    padding:10px 0;
+}
+#passwordManager .input-group{
+    padding: 20px;
+}
