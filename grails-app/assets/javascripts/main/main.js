@@ -131,7 +131,7 @@ var loader = {
     menuIndex         :      0,
     pageClass         :     '.index-page',
     functionMenu      :     '.functionMenu',
-    functionMenuArgs :      ['.page1', '.page2', '.page3'],
+    functionMenuArgs :      ['.page1', '.page2', '.page3', '.page4'],
     systemMenuArgs    :      [],
     init : function () {
         var self  = this;
