@@ -453,7 +453,14 @@ class TradingRecordController {
         tradingRecord.delete flush:true
 
         flash.message = '删除交易记录成功'
-        redirect action: 'index',  params: [tradingRecord: tradingRecord]
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'tradingRecord.label', default: 'TradingRecord'), tradingRecord.id])
+                /* redirect action:"index", method:"GET"*/
+                redirect action:"list", method:"GET"
+            }
+            '*'{ render status: NO_CONTENT }
+        }
     }
 
 }
