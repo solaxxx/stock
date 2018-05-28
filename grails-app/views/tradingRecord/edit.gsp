@@ -25,7 +25,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <form action="/tradingRecord/update" method="put">
+            <form action="/tradingRecord/update" method="post">
                 <input type="hidden" name="id" value="${tradingRecord.id}"/>
                 <input type="hidden" name="sharePrice" value="${sharePrice}"/>
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${util.ConstantUtil.JS_DATE_FORMATE_STR}">
@@ -100,12 +100,12 @@
                     </span>
                     <input type="text" name="tradingPrice" value="${tradingRecord.tradingPrice}" required="" id="tradingPrice" class="form-control" >
                 </div>
-                <div class="input-group">
+%{--                <div class="input-group">
                     <span class="input-group-addon">
                         成交金额(元)
                     </span>
-                    <input type="text" name="turnover" value="${tradingRecord && tradingRecord.turnover ? tradingRecord.turnover:0}" required="" id="turnover" class="form-control" >
-                </div>
+                </div>--}%
+                <input type="hidden" name="turnover" value="${tradingRecord && tradingRecord.turnover ? tradingRecord.turnover:0}" required="" id="turnover" class="form-control" >
                 <div class="textArea-group">
                     <span class="input-group-addon">
                         备注

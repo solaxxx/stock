@@ -39,10 +39,12 @@
 
         </tr>
         </tbody>
+         <% int index = 0 %>
         <g:each in="${tradingRecordList}" var="tradingRecord">
+            <% index++ %>
             <tr>
                 <!-- 交易号id -->
-                <td>${tradingRecord.id}</td>
+                <td>${index}</td>
                 <!-- 交易时间  -->
                 <td><g:formatDate date="${tradingRecord.transactionDate}" format="yyyy-MM-dd"></g:formatDate> </td>
                 <!-- 卖出人  -->
