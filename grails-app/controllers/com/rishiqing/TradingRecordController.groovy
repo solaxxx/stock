@@ -111,6 +111,7 @@ class TradingRecordController {
             shareRecord.save(flush: true)
             tradingRecord.sellShareRecord = shareRecord
             tradingRecord.sellOptionsRecord = null
+            tradingRecord.turnover = "-" + tradingRecord.sellShareNum * tradingRecord.tradingPrice.toDouble() + ""
         }else if(sellType == 2){ //卖出的是期权
             OptionsRecord optionsRecord = new OptionsRecord(
                     user: sellUser, //卖出人
@@ -125,6 +126,7 @@ class TradingRecordController {
             optionsRecord.save flush:true
             tradingRecord.sellShareRecord = null
             tradingRecord.sellOptionsRecord = optionsRecord
+            tradingRecord.turnover = "-" + tradingRecord.sellShareNum * tradingRecord.tradingPrice.toDouble() + ""
         }
 
         //对买入人进行操作
@@ -143,6 +145,7 @@ class TradingRecordController {
             shareRecord.save(flush: true)
             tradingRecord.buyShareRecord = shareRecord
             tradingRecord.buyOptionsRecord = null
+            tradingRecord.turnover = tradingRecord.sellShareNum * tradingRecord.tradingPrice.toDouble() + ""
         }else if(sellType == 2){ //买入的是期权
             OptionsRecord optionsRecord = new OptionsRecord(
                     user: buyUser, //买入人
@@ -157,6 +160,7 @@ class TradingRecordController {
             optionsRecord.save flush:true
             tradingRecord.buyShareRecord = null
             tradingRecord.buyOptionsRecord = optionsRecord
+            tradingRecord.turnover = tradingRecord.sellShareNum * tradingRecord.tradingPrice.toDouble() + ""
         }
 
         tradingRecord.save flush:true

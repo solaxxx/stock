@@ -38,9 +38,15 @@ class TradingRecord {
         remark type: 'text'
     }
     static constraints = {
+        transactionDate nullable: true
         remark nullable: true
+        sellUser nullable:  true//卖出人
+        sellOptionsRecord nullable: true //卖出人卖出期权相关信息
+        sellShareRecord nullable:true  //卖出人卖出股权相关信息
+        buyUser nullable: true  //买入人
+        buyOptionsRecord nullable: true //买入人买入期权相关信息
+        buyShareRecord nullable: true //买入人买入股权相关信息
     }
-
     static belongsTo = [
             sellUser : User, //卖出人
             sellOptionsRecord : OptionsRecord, //卖出人卖出期权相关信息

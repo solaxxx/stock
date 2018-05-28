@@ -23,6 +23,7 @@
             </ul>
             </g:hasErrors>
             <form action="/tradingRecord/edit?id=${tradingRecord.id}" method="post">
+                <input type="hidden" name="sharePrice" value="${sharePrice}"/>
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${util.ConstantUtil.JS_DATE_FORMATE_STR}">
                     <input type="text" class="form-control"
                            value="${tradingRecord && tradingRecord.transactionDate? tradingRecord.transactionDate: new Date().format(ConstantUtil.JAVA_DATE_FORMATE_STR)}"

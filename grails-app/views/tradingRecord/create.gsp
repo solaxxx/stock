@@ -25,22 +25,7 @@
                 <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a>
             </div>
             <form action="/tradingRecord/save" method="post">
-                <input type="hidden" name="sellUser" value="${tradingRecord.sellUser}"/>
-                <input type="hidden" name="sellOptionsRecord" value="${null}"/>
-                <input type="hidden" name="buyUser" value="${null}"/>
-                <input type="hidden" name="transactionDate" value="${null}"/>
-                <input type="hidden" name="sellShareRecord" value="${null}"/>
-                <input type="hidden" name="sharePrice" value="${0}"/>
-                <input type="hidden" name="buyOptionsRecord" value="${null}"/>
-                <input type="hidden" name="buyShareRecord" value="${null}"/>
-%{--                <input type="hidden" name="sellUser" value="${new base.User()}"/>
-                <input type="hidden" name="sellOptionsRecord" value="${new com.rishiqing.OptionsRecord()}"/>
-                <input type="hidden" name="buyUser" value="${new base.User() }"/>
-                <input type="hidden" name="transactionDate" value="${new java.util.Date()}"/>
-                <input type="hidden" name="sellShareRecord" value="${new com.rishiqing.ShareRecord()}"/>
-                <input type="hidden" name="sharePrice" value="${0}"/>
-                <input type="hidden" name="buyOptionsRecord" value="${new com.rishiqing.OptionsRecord()}"/>
-                <input type="hidden" name="buyShareRecord" value="${new com.rishiqing.ShareRecord()}"/>--}%
+                <input type="hidden" name="sharePrice" value="${sharePrice}"/>
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${ConstantUtil.JS_DATE_FORMATE_STR}">
                     <input type="text" class="form-control"
                            value="${tradingRecord && tradingRecord.transactionDate? tradingRecord.transactionDate: new Date().format(ConstantUtil.JS_DATE_FORMATE_STR)}"
