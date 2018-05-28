@@ -1,3 +1,4 @@
+<%@ page import="util.ConstantUtil" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +23,7 @@
             </ul>
             </g:hasErrors>
             <form action="/tradingRecord/edit?id=${tradingRecord.id}" method="post">
-                <div class="input-group date date-show" data-provide="datepicker" data-date-format="${ConstantUtil.JS_DATE_FORMATE_STR}">
+                <div class="input-group date date-show" data-provide="datepicker" data-date-format="${util.ConstantUtil.JS_DATE_FORMATE_STR}">
                     <input type="text" class="form-control"
                            value="${tradingRecord && tradingRecord.transactionDate? tradingRecord.transactionDate: new Date().format(ConstantUtil.JAVA_DATE_FORMATE_STR)}"
                            name="transactionDateStr" value="" required="" id="transactionDateStr"  placeholder="交易日期">
@@ -40,7 +41,7 @@
                             <g:if test="${tradingRecord.sellUser.id == sellUserVar.id}">
                             selected = "selected"
                             </g:if>
-                            >${sellUserVar.username}</option>
+                            >${sellUserVar.realName}</option>
                         </g:each>
                     </select>
                 </div>
@@ -61,7 +62,7 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        卖出人
+                        买入人
                     </span>
                     <select class="form-control" name="buyUserId">
                         <g:each in="${userList}" var="buyUserVar">
@@ -69,7 +70,7 @@
                                 <g:if test="${tradingRecord.buyUser.id == buyUserVar.id}">
                                 selected = "selected"
                                 </g:if>
-                            >${buyUserVar.username}</option>
+                            >${buyUserVar.realName}</option>
                         </g:each>
                     </select>
                 </div>
@@ -79,7 +80,15 @@
                     </span>
                     <input type="text" name="buyShareNum" value="${tradingRecord?.buyShareNum}" required="" id="buyShareNum" class="form-control" >
                 </div>
-
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        买入类型
+                    </span>
+                    <select class="form-control" name="buyType">
+                        <option value="1" ${tradingRecord.buyType == 1 ? "selected='selected'" : ""}>股权</option>
+                        <option value="2" ${tradingRecord.buyType == 2 ? "selected='selected'" : ""}>期权</option>
+                    </select>
+                </div>
                 <div class="input-group">
                     <span class="input-group-addon">
                         买卖单价

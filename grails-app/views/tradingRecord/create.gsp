@@ -1,3 +1,4 @@
+<%@ page import="util.ConstantUtil" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,9 +25,25 @@
                 <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a>
             </div>
             <form action="/tradingRecord/save" method="post">
+                <input type="hidden" name="sellUser" value="${tradingRecord.sellUser}"/>
+                <input type="hidden" name="sellOptionsRecord" value="${null}"/>
+                <input type="hidden" name="buyUser" value="${null}"/>
+                <input type="hidden" name="transactionDate" value="${null}"/>
+                <input type="hidden" name="sellShareRecord" value="${null}"/>
+                <input type="hidden" name="sharePrice" value="${0}"/>
+                <input type="hidden" name="buyOptionsRecord" value="${null}"/>
+                <input type="hidden" name="buyShareRecord" value="${null}"/>
+%{--                <input type="hidden" name="sellUser" value="${new base.User()}"/>
+                <input type="hidden" name="sellOptionsRecord" value="${new com.rishiqing.OptionsRecord()}"/>
+                <input type="hidden" name="buyUser" value="${new base.User() }"/>
+                <input type="hidden" name="transactionDate" value="${new java.util.Date()}"/>
+                <input type="hidden" name="sellShareRecord" value="${new com.rishiqing.ShareRecord()}"/>
+                <input type="hidden" name="sharePrice" value="${0}"/>
+                <input type="hidden" name="buyOptionsRecord" value="${new com.rishiqing.OptionsRecord()}"/>
+                <input type="hidden" name="buyShareRecord" value="${new com.rishiqing.ShareRecord()}"/>--}%
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${ConstantUtil.JS_DATE_FORMATE_STR}">
                     <input type="text" class="form-control"
-                           value="${tradingRecord && tradingRecord.transactionDate? tradingRecord.transactionDate: new Date().format(ConstantUtil.JAVA_DATE_FORMATE_STR)}"
+                           value="${tradingRecord && tradingRecord.transactionDate? tradingRecord.transactionDate: new Date().format(ConstantUtil.JS_DATE_FORMATE_STR)}"
                            name="transactionDateStr" value="" required="" id="transactionDateStr"  placeholder="交易日期">
                     <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th"></span>
@@ -38,7 +55,7 @@
                     </span>
                     <select class="form-control" name="sellUserId">
                         <g:each in="${userList}" var="sellUserVar">
-                            <option value="${sellUserVar.id}" >${sellUserVar.username}</option>
+                            <option value="${sellUserVar.id}" >${sellUserVar.realName}</option>
                         </g:each>
                     </select>
                 </div>
@@ -59,11 +76,11 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        卖出人
+                        买出人
                     </span>
                     <select class="form-control" name="buyUserId">
                         <g:each in="${userList}" var="buyUserId">
-                            <option value="${buyUserId.id}" >${buyUserId.username}</option>
+                            <option value="${buyUserId.id}" >${buyUserId.realName}</option>
                         </g:each>
                     </select>
                 </div>
@@ -73,7 +90,15 @@
                     </span>
                     <input type="text" name="buyShareNum" value="${tradingRecord?.buyShareNum}" required="" id="buyShareNum" class="form-control" >
                 </div>
-
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        买入类型
+                    </span>
+                    <select class="form-control" name="buyType">
+                        <option value="1" ${tradingRecord.buyType == 1 ? "selected='selected'" : ""}>股权</option>
+                        <option value="2" ${tradingRecord.buyType == 2 ? "selected='selected'" : ""}>期权</option>
+                    </select>
+                </div>
                 <div class="input-group">
                     <span class="input-group-addon">
                         买卖单价

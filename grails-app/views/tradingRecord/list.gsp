@@ -1,3 +1,4 @@
+<%@ page import="util.CommonUtil" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +44,7 @@
                 <!-- 卖出数量 -->
                 <td>${tradingRecord.sellShareNum}</td>
                 <!-- 卖出类型 -->
-                <g:if test="${tradingRecord.sellTypec == 1}">
+                <g:if test="${tradingRecord.sellType == 1}">
                     <td>股权</td>
                 </g:if>
                 <g:if test="${tradingRecord.sellType == 2}">
@@ -64,7 +65,7 @@
                 <td>${tradingRecord.turnover}</td>
                 <!-- 当前股票总值 -->
                 <td>${tradingRecord.totalShare}</td>
-                <td>${CommonUtil.subString(tradingRecord.remark)}</td>
+                <td>${util.CommonUtil.subString(tradingRecord.remark)}</td>
                 <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
                     <td>
                         <g:form resource="${tradingRecord}" method="DELETE">
