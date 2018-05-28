@@ -4,15 +4,21 @@
 <head>
     <meta name="layout" content="page" />
     <g:set var="entityName" value="${message(code: 'tradingRecord.label', default: 'TradingRecord')}" />
-    <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body class="page">
-    <div class="operation">
-        <a class="small-btn refresh glyphicon glyphicon-refresh" title="刷新" href="javascript:void(0)" onclick="location.reload()" > </a>
-    <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
-        <a class="small-btn refresh glyphicon glyphicon-plus" title="添加" href="/tradingRecord/create"> </a>
-    </sec:ifAnyGranted>
-    </div>
+<div class="tip-container">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active list">
+            <a class="small-btn refresh glyphicon glyphicon-refresh" title="刷新" href="javascript:void(0)" onclick="location.reload()" > </a>
+        </li>
+            <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
+                <li>
+                <a class="small-btn refresh glyphicon glyphicon-plus" title="添加" href="/tradingRecord/create"> </a>
+                </li>
+            </sec:ifAnyGranted>
+    </ul>
+</div>
+<div class="table-container">
     <table class="table  table-hover table-list">
         <tbody>
         <tr>
@@ -78,6 +84,7 @@
             </tr>
         </g:each>
     </table>
+</div>
 </div>
 </body>
 </html>

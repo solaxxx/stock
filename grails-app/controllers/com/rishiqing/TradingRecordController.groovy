@@ -25,7 +25,7 @@ import static org.springframework.http.HttpStatus.*
 @Transactional(readOnly = true)
 class TradingRecordController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+//    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
 
@@ -189,7 +189,8 @@ class TradingRecordController {
      * @return
      */
     @Transactional
-    def update(TradingRecord tradingRecord) {
+    def update() {
+        TradingRecord tradingRecord = TradingRecord.findById(params.id)
         if (tradingRecord == null) {
             transactionStatus.setRollbackOnly()
             notFound()

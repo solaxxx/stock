@@ -7,6 +7,12 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
+    <div class="tip-container">
+        <ul class="nav nav-tabs">
+            <li class="active list"><a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a></li>
+        </ul>
+    </div>
+    <div class="table-container">
         <div id="create-stockHistory" class="content scaffold-create" role="main">
             <g:if test="${flash.message}">
                 <div class="alert alert-info alert-dismissible" role="alert">
@@ -21,9 +27,6 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <div class="operation">
-                <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a>
-            </div>
             <form action="/tradingRecord/save" method="post">
                 <input type="hidden" name="sharePrice" value="${sharePrice}"/>
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${ConstantUtil.JS_DATE_FORMATE_STR}">
@@ -107,5 +110,6 @@
                 </div>
             </form>
         </div>
+    </div>
     </body>
 </html>

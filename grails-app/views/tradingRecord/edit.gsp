@@ -8,9 +8,12 @@
     </head>
     <body>
         %{--<div class="edit-top"> </div>--}%
-    <div class="operation">
-        <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a>
+    <div class="tip-container">
+        <ul class="nav nav-tabs">
+            <li class="active list"><a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a></li>
+        </ul>
     </div>
+    <div class="table-container">
         <div id="edit-stockHistory" class="content scaffold-edit" role="main">
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
@@ -22,7 +25,8 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <form action="/tradingRecord/edit?id=${tradingRecord.id}" method="post">
+            <form action="/tradingRecord/update" method="put">
+                <input type="hidden" name="id" value="${tradingRecord.id}"/>
                 <input type="hidden" name="sharePrice" value="${sharePrice}"/>
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${util.ConstantUtil.JS_DATE_FORMATE_STR}">
                     <input type="text" class="form-control"
@@ -113,5 +117,6 @@
                 </div>
             </form>
         </div>
+    </div>
     </body>
 </html>
