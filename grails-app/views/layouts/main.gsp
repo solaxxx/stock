@@ -36,6 +36,7 @@
             <li class="functionMenu">股权池</li>
             <li class="functionMenu">期权池</li>
             <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
+            <li class="functionMenu">交易记录</li>
             <li class="dropdown" >
                 <a href="#" class="dropdown-toggle noSelected" data-toggle="dropdown"> 系统管理 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">

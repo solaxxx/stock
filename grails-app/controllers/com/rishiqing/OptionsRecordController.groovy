@@ -181,6 +181,14 @@ class OptionsRecordController {
 
         optionsRecord.save flush:true
 
+        //判断是否有交易记录相关信息，如果有，删除相关交易信息(不考虑大数据和速度!)
+        List<TradingRecord> tradingRecordList = TradingRecord.findAllByBuyOptionsRecordOrSellOptionsRecord(optionsRecord, optionsRecord)
+        if(tradingRecordList && tradingRecordList.size() > 0){
+            for(TradingRecord tradingRecord : tradingRecordList){
+                tradingRecord.delete(flush: true)
+            }
+        }
+
 /*        request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'optionsRecord.label', default: 'OptionsRecord'), optionsRecord.id])
