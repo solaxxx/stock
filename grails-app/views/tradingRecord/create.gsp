@@ -93,12 +93,12 @@
                     </span>
                     <input type="text" name="tradingPrice" value="${tradingRecord.tradingPrice}" required="" id="tradingPrice" class="form-control" >
                 </div>
-                <input type="hidden" name="turnover" value="${tradingRecord && tradingRecord.turnover ? tradingRecord.turnover:0}" required="" id="turnover" class="form-control" >
-%{--                <div class="input-group">
+                <div class="input-group">
                     <span class="input-group-addon">
                         成交金额(元)
                     </span>
-                </div>--}%
+                    <input type="hidden" name="turnover" value="${tradingRecord && tradingRecord.turnover ? tradingRecord.turnover:0}" required="" id="turnover" class="form-control" >
+                </div>
                 <div class="textArea-group">
                     <span class="input-group-addon">
                         备注

@@ -40,7 +40,7 @@
                     <span class="input-group-addon">
                         买卖单价
                     </span>
-                    <input type="text"  readonly="readonly"  name="tradingPrice" value="${sharePrice}" required="" id="tradingPrice" class="form-control" >
+                    <input type="text"  readonly="readonly"  name="tradingPrice" value="${shareRecord.tradingPrice}" required="" id="tradingPrice" class="form-control" >
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
