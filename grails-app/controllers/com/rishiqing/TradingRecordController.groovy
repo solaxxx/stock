@@ -183,6 +183,21 @@ class TradingRecordController {
     }
 
     /**
+     * 跳转到查看页面
+     * @param id
+     * @return
+     */
+    def show(Long id) {
+        //获取要编辑的信息
+        TradingRecord tradingRecord = TradingRecord.findById(id)
+        //用户列表
+        List<User> userList = User.findAllByIsDeleted(false)
+        //当前股价
+        def sharePrice = GlobalSystemOptions.getInstance().getByType('share_price')
+        render (view: 'show', model: [tradingRecord:tradingRecord, sharePrice:sharePrice, userList:userList])
+    }
+
+    /**
      * 修改交易信息
      * @param tradingRecord
      * @return
