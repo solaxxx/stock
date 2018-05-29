@@ -139,7 +139,7 @@ class TradingRecordController {
                     transactionDate : transactionDate, //交易时间
                     tradingPrice :  tradingRecord.tradingPrice, //买卖单价
                     sharePrice: tradingRecord.sharePrice, //购买时股价
-                    turnover :  "-" + turnover, //成交金额
+                    turnover :  turnover, //成交金额
                     remark :  tradingRecord.remark //备注信息
             )
             shareRecord.save(flush: true)
@@ -154,7 +154,7 @@ class TradingRecordController {
                     transactionDate : transactionDate, //交易时间
                     tradingPrice :  tradingRecord.tradingPrice, //买卖单价
                     sharePrice: tradingRecord.sharePrice, //当前股价
-                    turnover :  "-" + turnover, //成交金额
+                    turnover :  turnover, //成交金额
                     remark :  tradingRecord.remark //备注信息
             )
             optionsRecord.save flush:true
@@ -342,7 +342,7 @@ class TradingRecordController {
                         transactionDate : transactionDate, //交易时间
                         tradingPrice :  tradingRecord.tradingPrice, //买卖单价
                         sharePrice: tradingRecord.sharePrice, //购买时股价
-                        turnover :  "-" + turnover, //成交金额
+                        turnover :  turnover, //成交金额
                         remark :  tradingRecord.remark //备注信息
                 )
                 shareRecord.save(flush: true)
@@ -360,7 +360,7 @@ class TradingRecordController {
                     buyShareRecord_db.transactionDate = transactionDate
                     buyShareRecord_db.tradingPrice = tradingRecord.tradingPrice
                     buyShareRecord_db.sharePrice = tradingRecord.sharePrice
-                    buyShareRecord_db.turnover = "-" + turnover
+                    buyShareRecord_db.turnover = turnover
                     buyShareRecord_db.remark = tradingRecord.remark
                     buyShareRecord_db.save(flush: true)
                     tradingRecord_db.buyShareRecord = buyShareRecord_db
@@ -374,7 +374,7 @@ class TradingRecordController {
                             transactionDate : transactionDate, //交易时间
                             tradingPrice :  tradingRecord.tradingPrice, //买卖单价
                             sharePrice: tradingRecord.sharePrice, //购买时股价
-                            turnover :  "-" + turnover, //成交金额
+                            turnover :  turnover, //成交金额
                             remark :  tradingRecord.remark //备注信息
                     )
                     shareRecord.save(flush: true)
@@ -393,7 +393,7 @@ class TradingRecordController {
                         transactionDate : transactionDate, //交易时间
                         tradingPrice :  tradingRecord.tradingPrice, //买卖单价
                         sharePrice: tradingRecord.sharePrice, //购买时股价
-                        turnover :  "-" + turnover, //成交金额
+                        turnover :  turnover, //成交金额
                         remark :  tradingRecord.remark //备注信息
                 )
                 optionsRecord.save(flush: true)
@@ -425,7 +425,7 @@ class TradingRecordController {
                             transactionDate : transactionDate, //交易时间
                             tradingPrice :  tradingRecord.tradingPrice, //买卖单价
                             sharePrice: tradingRecord.sharePrice, //购买时股价
-                            turnover :  "-" + turnover, //成交金额
+                            turnover :  turnover, //成交金额
                             remark :  tradingRecord.remark //备注信息
                     )
                     optionsRecord.save(flush: true)
@@ -482,7 +482,7 @@ class TradingRecordController {
         flash.message = '删除交易记录成功'
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'tradingRecord.label', default: 'TradingRecord'), tradingRecord.id])
+//                flash.message = message(code: 'default.deleted.message', args: [message(code: 'tradingRecord.label', default: 'TradingRecord'), tradingRecord.id])
                 /* redirect action:"index", method:"GET"*/
                 redirect action:"list", method:"GET"
             }

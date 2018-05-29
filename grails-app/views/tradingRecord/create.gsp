@@ -64,7 +64,7 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        买出人
+                        买入人
                     </span>
                     <select class="form-control" name="buyUserId">
                         <g:each in="${userList}" var="buyUserId">
