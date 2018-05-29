@@ -9,10 +9,11 @@
     <body>
     <div class="tip-container">
         <ul class="nav nav-tabs">
-            <li class="active list"><a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/tradingRecord/list"  > </a></li>
+            <li role="presentation" class="active list"><a href="#">交易记录</a></li>
         </ul>
     </div>
     <div class="table-container">
+        <g:link class="list create-btn back glyphicon glyphicon-arrow-left" action="list"></g:link>
         <div id="create-stockHistory" class="content scaffold-create" role="main">
             <g:if test="${flash.message}">
                 <div class="alert alert-info alert-dismissible" role="alert">

@@ -19,7 +19,7 @@
 </div>
 <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
 <div class="page4 index-page" style="display: none">
-    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/tradingRecord"></iframe>
+    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/tradingRecord/list"></iframe>
 </div>
 </sec:ifAnyGranted>
 </body>
