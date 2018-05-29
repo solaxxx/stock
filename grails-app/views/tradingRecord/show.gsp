@@ -27,7 +27,7 @@
         </g:hasErrors>
         <form action="" method="get">
             <div class="input-group date date-show" data-provide="datepicker" data-date-format="${util.ConstantUtil.JS_DATE_FORMATE_STR}">
-                <input type="text" class="form-control" readonly="readonly"
+                <input type="text" class="form-control" disabled="disabled"
                        value="${tradingRecord && tradingRecord.transactionDate? tradingRecord.transactionDate: new Date().format(ConstantUtil.JAVA_DATE_FORMATE_STR)}"
                        name="transactionDateStr" value="" required="" id="transactionDateStr"  placeholder="交易日期">
                 <div class="input-group-addon">
@@ -38,7 +38,7 @@
                 <span class="input-group-addon">
                     卖出人
                 </span>
-                <input type="text" name="sellUserId" readonly="readonly" value="${tradingRecord?.buyUser.realName}" required="" id="sellUserId" class="form-control" >
+                <input type="text" name="sellUserId" readonly="readonly" value="${tradingRecord?.sellUser.realName}" required="" id="sellUserId" class="form-control" >
             </div>
             <div class="input-group">
                 <span class="input-group-addon">

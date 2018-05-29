@@ -54,7 +54,7 @@
                     <span class="input-group-addon">
                         卖出数量
                     </span>
-                    <input type="text" name="sellShareNum" value="${tradingRecord?.sellShareNum}" required="" id="sellShareNum" class="form-control" >
+                    <input type="text" name="sellShareNum" value="${tradingRecord?.sellShareNum}" required="" id="sellShareNum_trading" class="form-control" >
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
@@ -83,7 +83,7 @@
                     <span class="input-group-addon">
                         买入数量
                     </span>
-                    <input type="text" name="buyShareNum" value="${tradingRecord?.buyShareNum}" required="" id="buyShareNum" class="form-control" >
+                    <input type="text" name="buyShareNum" value="${tradingRecord?.buyShareNum}" required="" readonly="readonly" id="buyShareNum_trading" class="form-control" >
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
@@ -98,13 +98,13 @@
                     <span class="input-group-addon">
                         买卖单价
                     </span>
-                    <input type="text" name="tradingPrice" value="${tradingRecord.tradingPrice}" required="" id="tradingPrice" class="form-control" >
+                    <input type="text" name="tradingPrice" value="${tradingRecord.tradingPrice}" required="" id="tradingPrice_trading" class="form-control" >
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">
                         成交金额(元)
                     </span>
-                    <input type="hidden" name="turnover" value="${tradingRecord && tradingRecord.turnover ? tradingRecord.turnover:0}" required="" id="turnover" class="form-control" >
+                    <input type="text" name="turnover" value="${tradingRecord && tradingRecord.turnover ? tradingRecord.turnover:0}" required="" id="turnover_trading" class="form-control" >
                 </div>
                 <div class="textArea-group">
                     <span class="input-group-addon">

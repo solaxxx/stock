@@ -82,6 +82,7 @@ class ShareRecordController {
         }*/
         def list = ShareRecord.createCriteria().list(params) {
             eq('user.id', id)
+            order("transactionDate", "desc")
         }
         Double shareValue =  Double.parseDouble(GlobalSystemOptions.getInstance().getByType('share_price'))
         list.each { it ->

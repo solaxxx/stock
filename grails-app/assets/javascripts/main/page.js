@@ -43,4 +43,12 @@ $(function () {
         var turnover = (buyNum - sellNum) * price;
         $('#turnover').val(parseFloat(turnover.toFixed(2)));
     })
+    $('#sellShareNum_trading,#tradingPrice_trading').blur(function (event) {
+        // var buyNum  = $('#buyShareNum_trading').val();
+        var sellNum = $('#sellShareNum_trading').val();
+        var price   = $('#tradingPrice_trading').val();
+        $('#buyShareNum_trading').val(sellNum);
+        var turnover = sellNum * price;
+        $('#turnover_trading').val(parseFloat(turnover.toFixed(2)));
+    })
 })
