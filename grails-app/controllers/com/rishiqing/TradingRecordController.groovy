@@ -480,6 +480,10 @@ class TradingRecordController {
         OptionsRecord so = tradingRecord.sellOptionsRecord
         ShareRecord bs = tradingRecord.buyShareRecord
         OptionsRecord bo = tradingRecord.buyOptionsRecord
+        tradingRecord.sellOptionsRecord = null
+        tradingRecord.sellShareRecord = null
+        tradingRecord.buyShareRecord = null
+        tradingRecord.buyOptionsRecord = null
         if(ss){
             ss.delete(flush: true)
         }

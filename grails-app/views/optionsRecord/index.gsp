@@ -65,7 +65,7 @@
                     <td>${oneEntity.buyShareNum}</td>
                     <td>${oneEntity.sellShareNum}</td>
                     <td>${oneEntity.tradingPrice}</td>
-                    <td>${oneEntity.sharePrice}</td>
+                    <td>${oneEntity.systemSharePrice}</td>
                     <td>${oneEntity.turnover}</td>
                     <td>${oneEntity.totalShare}</td>
                     <td>${CommonUtil.subString(oneEntity.remark)}</td>
