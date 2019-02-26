@@ -12,7 +12,7 @@ RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /
 ENV CATALINA_HOME=/usr/local/tomcat
 WORKDIR $CATALINA_HOME
 
-ADD stock.war webapps/task.war
+ADD stock.war webapps/stock.war
 
 RUN cd $CATALINA_HOME \
 && sed -i '108d' bin/catalina.sh \
