@@ -140,7 +140,7 @@ body {
     right: 20px;
     bottom: 100px;
     /*background-color: rgba(221,241,255, 1);*/
-    background: rgba(221,241,255, 0.6) url('../stock/background/bg1.png') no-repeat 0% center;
+    background: rgba(221,241,255, 0.6) url('/stock/assets/background/bg1.png') no-repeat 0% center;
     background-size:contain;
     /*background-color: rgba(221,241,255, 0.6);*/
     /*    background-image: url(../background/bg1.png);*!*/
