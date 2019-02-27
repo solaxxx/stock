@@ -12,7 +12,7 @@
 body  {
 	font-size: 12px;
 /*	background: url("/assets/background2.jpg") no-repeat center center fixed;*/
-	background:  rgba(221,241,255, 0.6) url("/assets/background/bg1.png") no-repeat center center fixed;
+	background:  rgba(221,241,255, 0.6) url("/stock/assets/background/bg1.png") no-repeat center center fixed;
 	background-size: contain;
 }
 ul {
@@ -76,7 +76,7 @@ ul {
 	top: 14px;
 	width: 18px;
 	height: 21px;
-	background: url("/assets/login-sprite-1.png") -5px -61px no-repeat;
+	background: url("/stock/assets/login-sprite-1.png") -5px -61px no-repeat;
 }
 .posR i.iconPsw {
 	position: absolute;
@@ -84,7 +84,7 @@ ul {
 	top: 14px;
 	width: 18px;
 	height: 21px;
-	background: url("/assets/login-sprite-1.png") -7px -104px no-repeat;}
+	background: url("/stock/assets/login-sprite-1.png") -7px -104px no-repeat;}
 .btnS.blueBtn {
 	background: #007eff;
 	border: 1px solid #007eff;

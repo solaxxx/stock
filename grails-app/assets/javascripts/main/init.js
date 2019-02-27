@@ -17,7 +17,7 @@ var init = {
     getSystemData :function () {
         var self = this
         $.ajax({
-            url: '/systemOptions/',
+            url: '/stock/systemOptions/',
             type: 'get',
             success : function (json) {
                 self.systemOptions = json;
