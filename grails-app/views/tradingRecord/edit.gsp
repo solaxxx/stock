@@ -26,7 +26,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <form action="/tradingRecord/update" method="post">
+            <form action="/stock/tradingRecord/update" method="post">
                 <input type="hidden" name="id" value="${tradingRecord.id}"/>
                 <input type="hidden" name="sharePrice" value="${sharePrice}"/>
                 <div class="input-group date date-show" data-provide="datepicker" data-date-format="${util.ConstantUtil.JS_DATE_FORMATE_STR}">

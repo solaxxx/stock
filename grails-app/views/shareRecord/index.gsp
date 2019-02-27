@@ -15,10 +15,10 @@
         </div>
         <div class="table-container">
             <div class="operation">
-                <a class="small-btn back glyphicon glyphicon-arrow-left" title="返回" href="/shareRecord/list"  > </a>
+                <a class="small-btn back glyphicon glyphicon-arrow-left" title="返回" href="/stock/shareRecord/list"  > </a>
                 <a class="small-btn refresh glyphicon glyphicon-refresh" title="刷新" href="javascript:void(0)" onclick="location.reload()" > </a>
                 <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
-                    <a class="small-btn refresh glyphicon glyphicon-plus" title="交易" href="/shareRecord/create/${userId}"> </a>
+                    <a class="small-btn refresh glyphicon glyphicon-plus" title="交易" href="/stock/shareRecord/create/${userId}"> </a>
                 </sec:ifAnyGranted>
             </div>
             <table class="table  table-hover table-list">
@@ -72,9 +72,9 @@
 
                             <td>
                                 <g:form resource="${oneEntity}" method="DELETE">
-                                    <a class="td-btn glyphicon glyphicon-list-alt" title="详细信息" href="/shareRecord/show?id=${oneEntity.id}&userId=${userId}"></a>
+                                    <a class="td-btn glyphicon glyphicon-list-alt" title="详细信息" href="/stock/shareRecord/show?id=${oneEntity.id}&userId=${userId}"></a>
                                     <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
-                                    <a class="td-btn glyphicon glyphicon-wrench" title="编辑" href="/shareRecord/edit?id=${oneEntity.id}&userId=${userId}"></a>
+                                    <a class="td-btn glyphicon glyphicon-wrench" title="编辑" href="/stock/shareRecord/edit?id=${oneEntity.id}&userId=${userId}"></a>
                                     <a class="td-btn  glyphicon glyphicon-trash" title="删除" onclick="$(this).next().click()"></a>
                                     <input class="delete" style="display:none" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('确定删除吗');" />
                                 </sec:ifAnyGranted>

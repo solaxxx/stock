@@ -13,8 +13,8 @@
         </ul>
     </div>
     <div class="table-container">
-        <iframe  class="iframe-list" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stockHistory/list"></iframe>
-        <iframe  class="iframe-create" frameborder="no" style="display: none" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stockHistory/create"></iframe>
+        <iframe  class="iframe-list" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/stockHistory/list"></iframe>
+        <iframe  class="iframe-create" frameborder="no" style="display: none" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/stockHistory/create"></iframe>
     </div>
     </body>
 </html>

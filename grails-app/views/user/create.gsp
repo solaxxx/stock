@@ -26,7 +26,7 @@
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>--}%
-            <form action="/user/save" method="post">
+            <form action="/stock/user/save" method="post">
                 <div class="input-group">
                     <span class="input-group-addon">用户名</span>
                     <input type="text" name="username" value="" required="" id="username" class="form-control" >

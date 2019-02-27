@@ -57,7 +57,7 @@
                 <li class="divider"></li>
                 <li class="changePassword"><a  data-toggle="modal" data-target="#passwordManager" href="#">修改密码</a></li>
                 <li class="divider"></li>
-                <li><a href="/logout">退出</a></li>
+                <li><a href="/stock/logout">退出</a></li>
             </ul>
         </div>
         <asset:image src="avatar.png" class="avatar"/>
@@ -116,7 +116,7 @@
                 <h4 class="modal-title">用户管理</h4>
             </div>
             <div class="modal-body">
-                <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/user"></iframe>
+                <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/user"></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary"  data-dismiss="modal">关闭</button>

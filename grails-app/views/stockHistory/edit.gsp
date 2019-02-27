@@ -8,7 +8,7 @@
     <body>
         %{--<div class="edit-top"> </div>--}%
     <div class="operation">
-        <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/stockHistory/list"  > </a>
+        <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/stock/stockHistory/list"  > </a>
     </div>
         <div id="edit-stockHistory" class="content scaffold-edit" role="main">
             <g:if test="${flash.message}">
@@ -21,7 +21,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-          <form action="/stockHistory/update/${this.stockHistory.id}" method="post">
+          <form action="/stock/stockHistory/update/${this.stockHistory.id}" method="post">
      <input type="hidden" name="_method" value="PUT" id="_method">
      <input type="hidden" name="version" value="${this.stockHistory.version}" id="version">
                 <div class="input-group">

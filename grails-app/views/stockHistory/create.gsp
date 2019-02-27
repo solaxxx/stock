@@ -22,9 +22,9 @@
             </ul>
             </g:hasErrors>
             <div class="operation">
-                <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/stockHistory/list"  > </a>
+                <a class="create-btn back glyphicon glyphicon-arrow-left" title="返回" href="/stock/stockHistory/list"  > </a>
             </div>
-            <form action="/stockHistory/save" method="post">
+            <form action="/stock/stockHistory/save" method="post">
                 <div class="input-group">
                     <span class="input-group-addon">增发事由</span>
                     <input type="text" name="description" value="" required="" id="description" class="form-control" >

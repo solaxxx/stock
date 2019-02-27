@@ -18,7 +18,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <form action="/user/update/${this.user.id}" method="post">
+            <form action="/stock/user/update/${this.user.id}" method="post">
                 <input type="hidden" name="_method" value="PUT" id="_method">
                 <input type="hidden" name="version" value="${this.user.version}" id="version">
                 <div class="input-group">

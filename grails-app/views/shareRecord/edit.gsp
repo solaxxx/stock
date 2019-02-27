@@ -26,7 +26,7 @@
                     </g:eachError>
                 </ul>
             </g:hasErrors>
-            <form action="/shareRecord/update" method="put">
+            <form action="/stock/shareRecord/update" method="put">
                 <input type="hidden" name="id" id="id" value="${shareRecord.id}">
                 <div class="input-group">
                     <span class="input-group-addon">

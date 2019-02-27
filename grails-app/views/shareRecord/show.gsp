@@ -16,7 +16,7 @@
         <g:link class="list create-btn back glyphicon glyphicon-arrow-left" action="index" params="[id:userId]"></g:link>
         <g:link class="list create-btn back  glyphicon glyphicon-home" action="list"></g:link>
         <div id="show-shareRecord" class="content scaffold-create" role="main">
-            <form action="/shareRecord/save" method="post">
+            <form action="/stock/shareRecord/save" method="post">
                 <input type="hidden" name="userId" id="userId" value="${userId}">
                 <div class="input-group">
                     <span class="input-group-addon">

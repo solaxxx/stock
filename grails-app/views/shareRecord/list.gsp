@@ -59,7 +59,7 @@
                         <td>${shareRecord.sharePercent}</td>
                     </sec:ifAnyGranted>
                     <td>
-                        <a class="td-btn glyphicon glyphicon-list-alt" title="编辑" href="/shareRecord/index/${shareRecord.userId}"></a>
+                        <a class="td-btn glyphicon glyphicon-list-alt" title="编辑" href="/stock/shareRecord/index/${shareRecord.userId}"></a>
                     </td>
                 </tr>
             </g:each>

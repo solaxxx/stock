@@ -15,7 +15,7 @@
     <div class="operation">
             <a class="small-btn refresh glyphicon glyphicon-refresh" title="刷新" href="javascript:void(0)" onclick="location.reload()" > </a>
         <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
-            <a class="small-btn refresh glyphicon glyphicon-plus" title="添加" href="/tradingRecord/create"> </a>
+            <a class="small-btn refresh glyphicon glyphicon-plus" title="添加" href="/stock/tradingRecord/create"> </a>
         </sec:ifAnyGranted>
     </div>
     <table class="table  table-hover table-list">
@@ -74,11 +74,11 @@
                 <td>${tradingRecord.totalShare}</td>
                 <td>${util.CommonUtil.subString(tradingRecord.remark)}</td>
                     <td>
-                        <a class="td-btn glyphicon glyphicon-list-alt" title="详细信息" href="/tradingRecord/show?id=${tradingRecord.id}"></a>
+                        <a class="td-btn glyphicon glyphicon-list-alt" title="详细信息" href="/stock/tradingRecord/show?id=${tradingRecord.id}"></a>
 
                         <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
                         <g:form resource="${tradingRecord}" method="DELETE">
-                            <a class="td-btn glyphicon glyphicon-wrench" title="编辑" href="/tradingRecord/edit/${tradingRecord.id}"></a>
+                            <a class="td-btn glyphicon glyphicon-wrench" title="编辑" href="/stock/tradingRecord/edit/${tradingRecord.id}"></a>
                             <a class="td-btn  glyphicon glyphicon-trash" title="删除" onclick="$(this).next().click()"></a>
                             <input class="delete" style="display:none" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('确定删除吗');" />
                         </g:form>

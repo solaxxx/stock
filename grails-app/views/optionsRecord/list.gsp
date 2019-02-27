@@ -60,7 +60,7 @@
                     </sec:ifAnyGranted>
 
                     <td>
-                        <a class="td-btn glyphicon glyphicon-list-alt" title="编辑" href="/optionsRecord/index/${optionsRecord.userId}"></a>
+                        <a class="td-btn glyphicon glyphicon-list-alt" title="编辑" href="/stock/optionsRecord/index/${optionsRecord.userId}"></a>
                     </td>
                 </tr>
             </g:each>

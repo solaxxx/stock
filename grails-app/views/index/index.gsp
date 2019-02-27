@@ -9,17 +9,17 @@
 </head>
 <body>
 <div class="page1 index-page">
-    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stockHistory"></iframe>
+    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/stockHistory"></iframe>
 </div>
 <div class="page2 index-page" style="display: none" >
-    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/shareRecord/list"></iframe>
+    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/shareRecord/list"></iframe>
 </div>
 <div class="page3 index-page" style="display: none">
-    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/optionsRecord/list"></iframe>
+    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/optionsRecord/list"></iframe>
 </div>
 <sec:ifAnyGranted roles='${util.ConstantUtil.ROLE_ADMIN}'>
 <div class="page4 index-page" style="display: none">
-    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/tradingRecord/list"></iframe>
+    <iframe  class="p1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="/stock/tradingRecord/list"></iframe>
 </div>
 </sec:ifAnyGranted>
 </body>
