@@ -8,6 +8,7 @@ hibernate:
 ---
 server:
     contextPath: /stock
+
 dataSource:
     pooled: true
     dbCreate: 'update'

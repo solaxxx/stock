@@ -1,7 +1,7 @@
-FROM registry-vpc.cn-beijing.aliyuncs.com/rsq-public/tomcat:8.0.50-jre8-stock
+FROM registry-vpc.cn-beijing.aliyuncs.com/rsq-public/tomcat:8.0.50-jre8-memcached-v3
 
-LABEL name="quilty-system" \
-       description="quilty-system" \
+LABEL name="equity-system" \
+       description="equity-system" \
        maintainer="rishiqing group" \
        org="rishiqing"
 
@@ -14,3 +14,6 @@ WORKDIR $CATALINA_HOME
 
 ADD stock.war webapps/stock.war
 
+RUN cd $CATALINA_HOME \
+&& sed -i '108d' bin/catalina.sh \
+&& sed -i '107d' bin/catalina.sh
