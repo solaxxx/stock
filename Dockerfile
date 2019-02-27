@@ -16,4 +16,5 @@ ADD stock.war webapps/stock.war
 
 RUN cd $CATALINA_HOME \
 && sed -i '108d' bin/catalina.sh \
-&& sed -i '107d' bin/catalina.sh
+&& sed -i '107d' bin/catalina.sh \
+&& sed -i '125a <Context path="" debug="0" docBase="stock" reloadable="true"/>' conf/server.xml
