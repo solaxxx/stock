@@ -105,16 +105,16 @@ $(function () {
 
     // 左右大按钮
     $('.left.btn1').mouseover(function (event) {
-        $(event.target).attr('src', '/assets/button/btn-left2.png')
+        $(event.target).attr('src', '/stock/assets/button/btn-left2.png')
     });
     $('.left.btn1').mouseout(function (event) {
-        $(event.target).attr('src', '/assets/button/btn-left1.png')
+        $(event.target).attr('src', '/stock/assets/button/btn-left1.png')
     });
     $('.right.btn1').mouseover(function (event) {
-        $(event.target).attr('src', '/assets/button/btn-right2.png')
+        $(event.target).attr('src', '/stock/assets/button/btn-right2.png')
     });
     $('.right.btn1').mouseout(function (event) {
-        $(event.target).attr('src', '/assets/button/btn-right1.png')
+        $(event.target).attr('src', '/stock/assets/button/btn-right1.png')
     });
 
     // 公告
